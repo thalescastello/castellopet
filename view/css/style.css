@@ -1,0 +1,1176 @@
+@charset "UTF-8";
+/**************************************************
+
+Projeto: CastelloPet
+Empresa: CastelloShop - ?
+Linguagens: HTML5/CSS3 JavaScript/jQuery PHP/MySQL
+
+***************************************************/
+/************ Style padrão do projeto *************/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+h2 {
+  color: white;
+  font-family: 'bebas_neueregular';
+  font-weight: normal; }
+
+h4 {
+  font-family: Arial !important; }
+
+a {
+  color: #BB3B3B;
+  font-size: 14px;
+  font-family: Arial; }
+
+body,
+html {
+  height: 100%;
+  background: #F8C0C0; }
+
+.fundo {
+  background: url("../img/fundo.jpg") no-repeat center center fixed;
+  height: 100%;
+  box-sizing: border-box; }
+
+.fundo_1 {
+  background: #F8C0C0; }
+
+legend {
+  font-weight: bold;
+  text-align: justify;
+  margin-right: 10px;
+  font-family: Arial; }
+
+.bold {
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'sanserifficregular';
+  src: url("../font/sanseriffic.eot");
+  src: url("../font/sanseriffic.eot?#iefix") format("embedded-opentype"), url("../font/sanseriffic.woff") format("woff"), url("../font/sanseriffic.ttf") format("truetype"), url("../font/sanseriffic.svg#sanserifficregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("../font/bebasneue.eot");
+  src: url("../font/bebasneue.eot?#iefix") format("embedded-opentype"), url("../font/bebasneue.woff") format("woff"), url("../font/bebasneue.ttf") format("truetype"), url("../font/bebasneue.svg#bebas_neueregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+select {
+  height: 27px;
+  width: 177px;
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  background-color: #e8e8e8;
+  cursor: pointer;
+  color: #666;
+  margin-top: 2px; }
+
+select option {
+  cursor: pointer; }
+
+p {
+  font-family: Arial;
+  font-size: 14px;
+  color: #000 !important; }
+
+input[type=radio] {
+  cursor: pointer;
+  margin-top: 5px; }
+
+article input[type=text] {
+  border: 1px solid #DD6262;
+  background-color: #e8e8e8;
+  height: 25px;
+  width: 180px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+article input[type=checkbox] {
+  margin: 0 5px 2px 0; }
+
+article input[type=password] {
+  border: 1px solid #DD6262;
+  background-color: #e8e8e8;
+  height: 25px;
+  width: 180px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+textarea {
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  width: 97%;
+  height: 200px;
+  background-color: #e8e8e8;
+  padding: 5px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin: 10px;
+  resize: none;
+  text-align: justify; }
+
+.espacamento, label {
+  float: left;
+  margin-left: 15px; }
+
+.espacamento_1, label {
+  float: left;
+  margin-left: 3px; }
+
+.espacamento_4, label {
+  float: left;
+  margin-left: 100px; }
+
+.right {
+  float: right; }
+
+.HeaderPrincipal {
+  background-image: url(../img/topo_fd.png);
+  width: 100%;
+  height: 99px; }
+
+.HeaderPrincipal .internoCentral {
+  width: 1200px;
+  height: 99px;
+  margin: auto; }
+
+.HeaderPrincipal .internoCentral a.logotipo {
+  background-image: url(../img/company_logo.png);
+  width: 499px;
+  height: 98px;
+  display: block;
+  text-indent: -9999px;
+  float: left; }
+
+.HeaderPrincipal .internoCentral .BlocoInfo {
+  width: 300px;
+  height: 45px;
+  float: right;
+  margin-right: 90px;
+  margin-top: 35px;
+  text-align: center; }
+
+.HeaderPrincipal .internoCentral .BlocoSUS {
+  background-image: url(../img/logo.jpg);
+  width: 238px;
+  height: 98px;
+  float: right;
+  display: block; }
+
+.BlocoInfo span {
+  font-family: Arial;
+  font-size: 14px;
+  color: #AD1515; }
+
+nav {
+  background-color: #AD1515;
+  width: 100%;
+  height: 25px;
+  border-radius: 7px;
+  text-align: center; }
+
+nav ul {
+  width: 1200px;
+  margin: auto;
+  display: block;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; }
+
+nav ul li {
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+  display: block;
+  position: relative;
+  letter-spacing: 2px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; }
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  width: 160px;
+  background: #AD1515;
+  padding: 0; }
+
+nav ul li ul li {
+  float: none;
+  margin-left: 2px;
+  letter-spacing: 2px; }
+
+nav ul li ul li a {
+  font-size: 18px;
+  margin-right: 5px; }
+
+nav ul li:hover ul {
+  display: block; }
+
+nav ul a {
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 18px;
+  padding-top: 2px;
+  color: white;
+  display: block; }
+
+nav ul a:hover {
+  color: #F8C0C0; }
+
+nav ul span #logout {
+  margin: -23px 0 0 1140px !important;
+  position: absolute;
+  z-index: 999;
+  letter-spacing: 3px; }
+
+nav ul span #logout:hover {
+  background-color: transparent !important; }
+
+.clear {
+  clear: both; }
+
+.space {
+  height: 5px; }
+
+.container {
+  width: 1200px;
+  margin: auto;
+  background-color: none; }
+
+.content {
+  background-color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; }
+
+.ContentInterna {
+  background-color: #e8e8e8 !important;
+  width: 1200px;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 7px;
+  border: 1px solid #DD6262; }
+
+.ContFicha {
+  border-radius: 7px !important;
+  padding: 0px 10px 10px 10px; }
+
+#inf_acesso {
+  margin-left: 55px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666; }
+
+#user {
+  background-image: url(../img/user.png);
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  display: block;
+  margin-top: 0px !important; }
+
+#pass {
+  background-image: url(../img/pass.png);
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  display: block; }
+
+.inputlogin {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  width: 245px;
+  height: 30px;
+  font-family: 'sanserifficregular';
+  font-size: 15px;
+  text-align: center;
+  color: #666;
+  padding-left: 5px; }
+
+#usuario, #password {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: #333333;
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 53px; }
+
+#user, #pass {
+  margin: 23px 0 0 350px; }
+
+input[type="submit"] {
+  margin: 0 0 10px 10px; }
+
+#limpar, #acessar {
+  font-family: Arial;
+  color: #fff;
+  font-size: 15px;
+  background-color: #AD1515;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 5px; }
+
+#acessar:hover, #limpar:hover {
+  opacity: 0.8;
+  cursor: pointer; }
+
+#HoldTopo {
+  width: 100%;
+  height: 25px;
+  background-color: #cccccc;
+  border-bottom: 2px solid #666;
+  margin-bottom: 10px; }
+
+#HoldTopo h3 {
+  color: #7f1200;
+  padding: 2px 0 0 10px; }
+
+#HoldTopo a {
+  float: right;
+  margin: -22px 20px 0 0;
+  text-decoration: none;
+  font-size: 16px; }
+
+#HoldTopo a:hover {
+  color: #7f1200; }
+
+#holdhead {
+  width: 100%;
+  padding-top: 5px; }
+
+#logotipo {
+  padding-left: 25px; }
+
+#logotipo #logo {
+  background-image: url(../img/logotipo.jpg);
+  width: 155px;
+  height: 125px;
+  display: block;
+  text-indent: -9999px;
+  border-radius: 7px;
+  float: left;
+  border: 1px solid #000; }
+
+.cabecalho td {
+  font-size: 14px;
+  font-family: Arial;
+  color: #00285b;
+  padding: 5px; }
+
+.default {
+  background-color: #ccc; }
+
+.contentForm p {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px;
+  background-color: white; }
+
+#prefeitura {
+  background-image: url(../img/prefeitura.jpg);
+  width: 100px;
+  height: 56px;
+  float: left;
+  border-radius: 7px;
+  margin-bottom: 5px; }
+
+#titulo {
+  width: 360px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial;
+  margin-top: 5px;
+  font-size: 18px; }
+
+#sub_titulo,
+#sub_titulo_adm {
+  width: 25%;
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border: 1px solid #DD6262;
+  border-bottom: none;
+  background-color: #AD1515;
+  color: #fff; }
+
+#sub_titulo_adm {
+  margin-left: 0px; }
+
+.info, .info_msg {
+  width: 100%;
+  border: 1px solid #DD6262;
+  float: right;
+  background-color: white;
+  border-radius: 7px;
+  font-family: Arial;
+  font-size: 13.4px;
+  padding-top: 10px;
+  margin-top: 10px; }
+
+.info_msg {
+  padding-top: 0 !important;
+  margin-top: 0 !important; }
+
+#titulo1 {
+  margin: auto;
+  margin-bottom: 10px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold; }
+
+#notific {
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: -45px;
+  float: right; }
+
+#nu_notificacao {
+  border: 0;
+  background-color: #FFF;
+  height: 25px;
+  width: 175px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  color: red;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+#LinksIndex li {
+  list-style: none;
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px; }
+
+#LinksIndex li a {
+  text-decoration: none; }
+
+#LinksIndex li a:hover {
+  text-decoration: underline; }
+
+fieldset {
+  border: 1px solid #DD6262;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border-radius: 7px;
+  width: 1140px; }
+
+/******* CAMPOS E BOT├òES DO CADASTRO *******/
+#definicao {
+  width: 1175px;
+  border: 3px solid #DD6262;
+  border-radius: 7px;
+  padding: 10px; }
+
+#definicao legend {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold; }
+
+#definicao span {
+  font-family: Arial;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px; }
+
+.maiusculo {
+  text-transform: uppercase; }
+
+.desc_admin {
+  width: 1169px;
+  background: white;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: justify; }
+
+.desc_admin span {
+  font-family: Arial;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 14px; }
+
+#campos_gerais {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#tp_notificacao {
+  width: 530px; }
+
+#encaminhamento {
+  width: 397px;
+  height: 100px; }
+
+#co_uf_notificacao,
+#co_uf_residencia,
+#co_uf_atual,
+#co_uf_residencia_atual,
+#co_uf_transf,
+#co_uf_prenatal {
+  width: 50px; }
+
+#co_uf_transf {
+  float: right;
+  margin-bottom: 5px; }
+
+#municipio_notificacao {
+  width: 268px; }
+
+#municipio_residencia {
+  width: 465px; }
+
+#unidade_notificacao {
+  width: 598px; }
+
+#campos_notificacao {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#no_nome_paciente {
+  width: 538px; }
+
+#campo_idade {
+  margin-left: 10px;
+  width: 370px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#idade {
+  width: 85px; }
+
+.opcao {
+  margin-right: 5px;
+  width: 30px !important;
+  float: right; }
+
+.opcao_1 {
+  width: 30px !important;
+  margin-right: 10px;
+  float: left; }
+
+.opcao_out {
+  width: 190px !important;
+  margin-right: 5px;
+  float: left; }
+
+.opcao_cpf {
+  width: 350px !important;
+  margin-right: 5px;
+  float: left; }
+
+#campo_sexo {
+  margin-left: 15px;
+  width: 137px;
+  height: 65px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#campo_sexo label {
+  margin-left: 0; }
+
+#campo_gestante {
+  margin-left: 15px;
+  width: 540px;
+  height: 65px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+.label_margin {
+  margin-left: 0 !important;
+  margin-right: 10px !important; }
+
+.label_margin_1 {
+  margin-left: 0 !important;
+  margin-right: 10px !important;
+  margin-top: 7px !important; }
+
+.label_margin_2 {
+  margin: 7px 25px !important; }
+
+.label_margin_3 {
+  margin-top: 7px !important;
+  margin-right: 40px;
+  margin-left: 0px; }
+
+.label_margin_4 {
+  margin-top: 5px !important;
+  margin-left: 35px; }
+
+.label_margin_5 {
+  margin-left: 0 !important;
+  margin-right: 70px !important;
+  margin-top: 7px !important; }
+
+.label_margin_6 {
+  margin-left: 80px !important;
+  margin-right: 100px !important;
+  margin-top: 7px !important; }
+
+.label_margin_7 {
+  margin-left: 0 !important;
+  margin-right: 15px !important;
+  margin-top: 7px !important; }
+
+#campo_raca {
+  margin-left: 10px;
+  width: 435px;
+  height: 65px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#campo_escolaridade,
+#campo_imuno,
+#campo_risco,
+#campo_cpf {
+  margin-left: 15px;
+  width: 1141px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#campo_cpf {
+  width: 416px; }
+
+#no_nome_mae {
+  width: 510px; }
+
+#campos_residencia {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#endereco_input_div,
+#acompanhamento {
+  background-color: #AD1515;
+  color: #FFF;
+  width: 96.8%;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 15px;
+  margin-top: 0;
+  border-radius: 5px; }
+
+.pergunta {
+  color: #DD6262 !important;
+  font-size: 18px; }
+
+#endereco_input {
+  width: 99.8%; }
+
+#unidade_res,
+#equipe {
+  width: 945px; }
+
+#duvidas {
+  margin-top: -10px;
+  margin-bottom: 3px; }
+
+#duvidas a {
+  color: red;
+  text-decoration: none; }
+
+#duvidas a:hover {
+  color: #9D0E0E;
+  text-decoration: none; }
+
+#cod_microa_res {
+  width: 450px; }
+
+#co_municipio_residencia,
+#co_logradouro_residencia,
+#nu_residencia {
+  width: 122px; }
+
+#distrito_residencia {
+  width: 260px; }
+
+#no_bairro_residencia {
+  width: 260px; }
+
+#logradouro {
+  width: 449px; }
+
+#ds_complemento_residencia {
+  width: 608px; }
+
+#ds_referencia_residencia {
+  width: 503px; }
+
+#campo_populacao {
+  margin-left: 15px;
+  width: 225px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#nu_ddd_residencia {
+  width: 35px; }
+
+#nu_telefone_residencia {
+  width: 140px; }
+
+#campo_zona {
+  margin-left: 15px;
+  width: 179px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#co_pais_residencia {
+  width: 220px; }
+
+#campos_caso {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+.sim_nao {
+  margin-left: 15px;
+  width: 110px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+.sim_nao label {
+  margin-left: 0;
+  margin-right: 10px; }
+
+#ob_uni_saude,
+#int_uni_saude {
+  width: 695px; }
+
+#int_cod_unidade {
+  width: 130px; }
+
+#int_municipio {
+  width: 255px; }
+
+#nu_prontuario {
+  width: 482px; }
+
+#campo_tp_entrada,
+#campo_pp_especiais,
+#campo_beneficiario,
+#campo_forma,
+#campo_extrapulmonar,
+#campo_da_associados,
+#campo_diagnostico,
+#campo_radiografia,
+#campo_hiv,
+#campo_terapia,
+#campo_histopatologia,
+#campo_cultura,
+#campo_molecular,
+#campo_sensibilidade,
+#campo_contatos,
+#campo_baciloscopia,
+#campo_tdo,
+#campo_examinados,
+#campo_encerramento,
+#campo_transferencia,
+#campo_uf_transf {
+  margin-left: 15px;
+  width: 640px;
+  float: left;
+  border: 1px solid #DD6262;
+  border-top: none;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-bottom: 10px; }
+
+#campo_pp_especiais {
+  width: 780px; }
+
+#campo_beneficiario {
+  width: 342px;
+  height: 74px; }
+
+#campo_forma {
+  width: 425px; }
+
+#campo_extrapulmonar {
+  width: 698px; }
+
+#campo_da_associados {
+  width: 1140px; }
+
+#campo_diagnostico,
+#campo_radiografia,
+#campo_hiv {
+  width: 369px; }
+
+#campo_terapia {
+  width: 400px;
+  height: 59px; }
+
+#campo_histopatologia {
+  width: 724px; }
+
+#campo_cultura {
+  width: 300px;
+  height: 73px; }
+
+#campo_molecular {
+  width: 824px;
+  height: 73px; }
+
+#campo_sensibilidade {
+  width: 720px;
+  height: 70px; }
+
+#campo_contatos {
+  width: 150px;
+  margin-left: 0px; }
+
+#campos_acompanhamento {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#co_municipio_atual,
+#municipio_residencia_atual {
+  width: 635px; }
+
+#nu_notificacao_atual,
+#co_unidade_saude_atual,
+#nu_cep_residencia_atual {
+  width: 220px; }
+
+#unidade_saude_atual {
+  width: 680px; }
+
+#co_distrito_residencia_atual,
+#nu_prontuario_atual {
+  width: 200px; }
+
+#co_bairro_residencia_atual {
+  width: 190px; }
+
+#campo_baciloscopia {
+  width: 700px;
+  margin-left: 5px; }
+
+#campo_tdo {
+  width: 575px; }
+
+#campo_examinados {
+  width: 315px; }
+
+#campo_encerramento {
+  width: 655px; }
+
+#campo_transferencia {
+  width: 463px; }
+
+#campo_uf_transf {
+  width: 180px; }
+
+#municipio_transf {
+  width: 715px; }
+
+#resp_encerramento {
+  width: 460px; }
+
+#campos_investigador {
+  margin-left: 15px;
+  width: 1169px;
+  border: 1px solid #DD6262;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#inv_unidade {
+  width: 940px; }
+
+#inv_cod_unidade {
+  width: 187px; }
+
+#inv_nome,
+#inv_funcao,
+#inv_assinatura {
+  width: 370px; }
+
+#limpar_cad, #salvar {
+  font-family: Arial;
+  color: #fff;
+  font-size: 14px;
+  background-color: #AD1515;
+  width: 100px;
+  height: 20px;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-top: 20px; }
+
+#salvar:hover, #limpar_cad:hover {
+  opacity: 0.8;
+  cursor: pointer; }
+
+#b_campos {
+  width: 97.3%;
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  padding-top: 5px;
+  margin: 5px 0 10px 15px; }
+
+#b_municipio,
+#b_unid_notific {
+  width: 350px; }
+
+#b_limpar_form, #buscar {
+  font-family: Arial;
+  color: #fff;
+  font-size: 14px;
+  background-color: #AD1515;
+  width: 100px;
+  height: 20px;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-bottom: 15px; }
+
+#buscar {
+  margin-left: 15px; }
+
+#resultado {
+  margin: 0 15px 15px 15px;
+  border: 1px solid #DD6262;
+  border-radius: 7px; }
+
+#listar_resultado {
+  width: 100%; }
+
+#listar_resultado th {
+  border: 1px solid #DD6262;
+  background-color: #AD1515;
+  color: #fff; }
+
+#listar_resultado td {
+  border: 1px solid #DD6262;
+  background-color: #e8e8e8; }
+
+#busca_op, label {
+  margin-left: 5px; }
+
+#num_pag {
+  width: 50px;
+  margin: 5px; }
+
+article input[type=search] {
+  border: 1px solid #DD6262;
+  background-color: #e8e8e8;
+  height: 25px;
+  width: 180px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin: 5px;
+  text-align: center; }
+
+#r_campos {
+  width: 97.3%;
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  padding-top: 5px;
+  margin: 5px 0 10px 15px; }
+
+#relatorio {
+  margin-left: 15px; }
+
+#r_unidade {
+  width: 1135px; }
+
+#cad_usuario {
+  margin: auto;
+  width: 810px;
+  height: 200px;
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+
+#salvar_usu, #limpar_usu {
+  font-family: Arial;
+  color: #fff;
+  font-size: 14px;
+  background-color: #AD1515;
+  width: 110px;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-left: 15px; }
+
+#salvar_usu:hover, #limpar_usu:hover {
+  opacity: 0.8;
+  cursor: pointer; }
+
+#mensagem {
+  margin: 30px; }
+
+#nv_agravo {
+  font-family: Arial;
+  color: #fff;
+  font-size: 14px;
+  background-color: #AD1515;
+  width: 110px;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 7px; }
+
+#nv_agravo:hover {
+  opacity: 0.8;
+  cursor: pointer; }
+
+.inputcadlogin {
+  border: 1px solid #DD6262;
+  background-color: #e8e8e8;
+  height: 25px;
+  width: 380px !important;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+#login {
+  background: white;
+  width: 515px;
+  height: 290px;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  margin-top: -135px;
+  left: 50%;
+  margin-left: -225px; }
+
+#login input[type=submit] {
+  margin: 0 0 0 225px !important; }
+
+#login .espacamento {
+  margin-top: 20px !important; }
+
+#login .espacamento_3 {
+  margin-top: 15px !important;
+  margin-left: 185px !important; }
+
+#login .espacamento_4 {
+  margin-top: -75px !important; }
+
+#login .logo_sus {
+  /*background-image: url(../img/sus.jpg);*/
+  width: 130px;
+  height: 65px;
+  margin-top: 40px;
+  margin-left: 15px;
+  display: block; }
+
+#status {
+  margin-left: 100px;
+  font-size: 14px;
+  font-family: Arial;
+  color: #666; }
+
+#topText {
+  background: #AD1515;
+  width: 100%;
+  height: 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 50px !important; }
+
+#topText h2 {
+  text-align: center;
+  line-height: 35px; }
+
+#topText a {
+  margin-left: 30px; }
+
+#nome_paciente {
+  width: 740px; }
