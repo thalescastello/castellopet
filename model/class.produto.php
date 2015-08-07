@@ -3,7 +3,7 @@
 	class produto {
 		private $id_produto;
 		private $codigo;
-		private $descricao;
+		private $nome_produto;
 		private $codigobarras;
 
 		function __construct($id=''){ /* Preenche objeto com os dados do banco (id) */
@@ -13,14 +13,14 @@
 				$dados = $qry->fetch_assoc();
 				$this->setId_Produto($dados['id_produto']);
 				$this->setCodigo($dados['codigo']);
-				$this->setDescricao($dados['descricao']);
+				$this->setnome_produto($dados['nome_produto']);
 				$this->setCodigobarras($dados['codigobarras']);
 			}
 		}
 
 		public function cadastrar(){
 			$banco = conecta();
-			$qry = $banco->query("insert into tb_produto (codigo,descricao,codigobarras) values ('".$this->getCodigo()."','".$this->getDescricao()."','".$this->getCodigobarras()."')");
+			$qry = $banco->query("insert into tb_produto (codigo,nome_produto,codigobarras) values ('".$this->getCodigo()."','".$this->getnome_produto()."','".$this->getCodigobarras()."')");
 			if($qry){
 				return true;
 			} else {
@@ -28,23 +28,34 @@
 			}
 		}
 
-		public function buscarProduto($descricao){
+		public function buscarProduto($nome_produto){
 			$banco = conecta();
-			$qry = $banco->query("select * from tb_produto where descricao = '".$descricao."'");
+			$qry = $banco->query("select * from tb_produto where nome_produto = '".$nome_produto."'");
 			if($qry->num_rows > 0){
 				$retorno = '';
 				while($dados = $query->fetch_assoc()) $retorno[] = $dados;
 				return $retorno;
 			}
 		}
+
+		public function listaProduto(){
+			$banco = conecta();
+			$qry = $banco->query("select * from tb_produto");
+			if($qry->num_rows > 0){
+				$retorno = '';
+				while($dados = $query->fetch_assoc()) $retorno[] = $dados;
+				return $retorno;
+			}
+		}
+
 		public function setId_Produto($id_produto){
 			$this->id_produto = $id_produto;
 		}
 		public function setCodigo($codigo){
 			$this->codigo = $codigo;
 		}
-		public function setDescricao($descricao){
-			$this->descricao = $descricao;
+		public function setnome_produto($nome_produto){
+			$this->nome_produto = $nome_produto;
 		}
 		public function setCodigobarras($codigobarras){
 			$this->codigobarras = $codigobarras;
@@ -55,8 +66,8 @@
 		public function getCodigo(){
 			return $this->codigo;
 		}
-		public function getDescricao(){
-			return $this->descricao;
+		public function getnome_produto(){
+			return $this->nome_produto;
 		}
 		public function getCodigobarras(){
 			return $this->codigobarras;

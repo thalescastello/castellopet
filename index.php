@@ -26,6 +26,7 @@
 				carregaView('cad_usuarios.html');
 			break;	
 			case 'cad_produtos':		
+				include "controller/produto.php";
 				carregaView('cad_produtos.html');
 			break;
 			case 'cad_produtosgrupo':		

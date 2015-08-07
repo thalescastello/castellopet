@@ -61,7 +61,7 @@ legend {
   font-style: normal; }
 select {
   height: 27px;
-  width: 177px;
+  width: 105px;
   border: 1px solid #DD6262;
   border-radius: 7px;
   background-color: #e8e8e8;
@@ -110,6 +110,14 @@ article input[type=password] {
   margin-bottom: 10px;
   text-align: center; }
 
+  article input[type=file] {
+  font-size: 14px;
+  font-family: Arial;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-align: center; }
+
 textarea {
   border: 1px solid #DD6262;
   border-radius: 7px;
@@ -135,6 +143,15 @@ textarea {
 .espacamento_4, label {
   float: left;
   margin-left: 100px; }
+
+.espacamento_img, label {
+  float: left;
+  margin-left: 840px;
+  margin-top: -108px;
+  margin-bottom: 5px;
+  border: 1px solid #DD6262;
+  border-radius: 7px;
+  padding: 5px; }
 
 .right {
   float: right; }
@@ -247,7 +264,7 @@ nav ul span #logout:hover {
 .space {
   height: 5px; }
 
-.container {
+.container,  {
   width: 1200px;
   margin: auto;
   background-color: none; }
@@ -445,10 +462,10 @@ input[type="submit"] {
   font-size: 14px;
   font-family: Arial;
   font-weight: bold;
-  margin-top: -45px;
+  margin-top: -30px;
   float: right; }
 
-#nu_notificacao {
+#situacao {
   border: 0;
   background-color: #FFF;
   height: 25px;
@@ -985,7 +1002,7 @@ fieldset {
   height: 20px;
   font-weight: bold;
   border-radius: 7px;
-  margin-top: 20px; }
+  margin-left: 15px; }
 
 #salvar:hover, #limpar_cad:hover {
   opacity: 0.8;
@@ -1172,5 +1189,20 @@ article input[type=search] {
 #topText a {
   margin-left: 30px; }
 
-#nome_paciente {
-  width: 740px; }
+#nome_produto {
+  width: 610px; }
+
+#mostrar {
+  width: 175px;
+  height: 70px;
+  margin-left: 23%; }
+
+#fornecedor_produto {
+  width: 500px; }
+
+#qtd_produto {
+  width: 115px; }
+
+#v_unitario_produto,
+#v_venda_produto {
+  width: 150px; }
