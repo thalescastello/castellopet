@@ -3,6 +3,7 @@
 	require_once "model/class.usuario.php";
 	require_once "model/class.produto.php";
 	require_once "model/class.produtogrupo.php";
+	require_once "model/class.pedido.php";
 
 	if(isset($req) and $req == 'logar'){ /* Identifica requisição (Chamada no campo hidden em login) */
 		$usuario = new usuario();
@@ -86,6 +87,35 @@
 					
 				echo json_encode($retorno);
 			break;
+			case 'cadpedidovenda':
+				if ($numero!="") {
+					$objeto = new pedido();
+					$objeto->setNumero($numero);
+					$objeto->setTipopedido($tipopedido);
+					$objeto->setDescricao($descricao);
+					$objeto->setCodordemservico($codordemservico);
+					$objeto->setCodcliente($codcliente);
+					$objeto->setSolicitante($solicitante);
+					$objeto->setDescontovalor($descontovalor);
+					$objeto->setSituacao($situacao);
+					$objeto->setTotalcusto($totalcusto);
+					$objeto->setTotalpedido($totalpedido);
+					$objeto->setTotalimpostos($totalimpostos);
+
+					if($objeto->cadastrar()){
+						$retorno['status'] = true;
+						$retorno['mensagem'] = 'Pedido de Venda registrado com sucesso';
+					} else {
+						$retorno['status'] = false;
+						$retorno['mensagem'] = 'Erro ao cadastrar';
+					}					
+				} else {
+					$retorno['status'] = false;
+					$retorno['mensagem'] = 'Por favor preencha todos os campos';
+				}
+					
+				echo json_encode($retorno);
+			break;			
 		}
 	}
 
